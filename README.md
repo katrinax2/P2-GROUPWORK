@@ -1,8 +1,8 @@
-# P2-GROUPWORK
+# P2-GROUP WORK
 ## GROUP MEMBERS 
 ## C Authors 
 ### Katrina Watson - 2404855
 ### Hannah Charles - 2405391
 
 ## Python Authors  
-Allisha Johnson 2305609
+### Allisha Johnson - 2305609

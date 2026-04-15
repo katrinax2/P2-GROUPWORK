@@ -1,12 +1,13 @@
 /******************************************************************************
- * Hospital Employee Management System
+ * Care For You Hospital Employee Management System
  * CSV Format: id,firstname,lastname,role,department,payroll
  ******************************************************************************/
  
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
- 
+
+//============= STRUCTS =============
 typedef struct {
     int  id;
     char firstname[30];
