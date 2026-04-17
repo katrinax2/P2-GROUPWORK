@@ -10,6 +10,7 @@
 
 ## Files 
 #### * EmployeeSystem.c → Main C program 
+#### * EmpSystem.py → Generate payroll report 
 #### * employee.csv → Stores employee records (no headers)
 #### * admin.txt → Stores admin login credentials
 

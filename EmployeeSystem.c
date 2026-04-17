@@ -1,6 +1,6 @@
 /******************************************************************************
  * Care For You Hospital Employee Management System
- * CSV Format: id,firstname,lastname,role,department,payrate,status
+ * CSV Format: id,firstname,lastname,role,department,pay_rate,status
  * Status can be: Active, OnLeave, Terminated
  ******************************************************************************/
 #include <stdio.h>
