@@ -1,20 +1,20 @@
-1001,Alicia,Brown,Nurse,Emergency,52000
-1002,David,Smith,Doctor,Surgery,120000
-1003,Marsha,Campbell,Receptionist,Front Desk,35000
-1004,Kevin,Johnson,Pharmacist,Pharmacy,60000
-1005,Tanya,Clarke,Nurse,Maternity,50000
-1006,Andre,Williams,Doctor,Emergency,115000
-1007,Simone,Reid,LabTech,Lab,48000
-1008,Richard,Thomas,Doctor,Surgery,150000
-1009,Janelle,White,Nurse,Pediatrics,51000
-1010,Omar,Grant,Security,Main Gate,30000
-1011,Natalie,Green,Receptionist,Front Desk,34000
-1012,Peter,Hall,Doctor,Cardiology,125000
-1013,Shanice,Bennett,Nurse,Emergency,49000
-1014,Dwayne,Carter,Janitor,Maintenance,28000
-1015,Kerry,Mitchell,Pharmacist,Pharmacy,62000
-1016,Leon,Phillips,Doctor,Orthopedics,130000
-1017,Rochelle,Turner,LabTech,Lab,47000
-1018,Jason,Edwards,Security,Emergency,31000
-1019,Kimberly,Moore,Nurse,Maternity,49500
-1020,Trevor,James,Administrator,Administration,70000
+1001,Alicia,Brown,Nurse,Emergency,32,Active
+1002,David,Smith,Doctor,Surgery,120,Active
+1003,Marsha,Campbell,Receptionist,Front Desk,15,OnLeave
+1004,Kevin,Johnson,Pharmacist,Pharmacy,45,Active
+1005,Tanya,Clarke,Nurse,Maternity,30,Active
+1006,Andre,Williams,Doctor,Emergency,110,OnLeave
+1007,Simone,Reid,LabTech,Lab,28,Active
+1008,Richard,Thomas,Doctor,Surgery,130,Active
+1009,Janelle,White,Nurse,Pediatrics,31,OnLeave
+1010,Omar,Grant,Security,Main Gate,14,Active
+1011,Natalie,Green,Receptionist,Front Desk,14,Active
+1012,Peter,Hall,Doctor,Cardiology,125,Terminated
+1013,Shanice,Bennett,Nurse,Emergency,29,Active
+1014,Dwayne,Carter,Janitor,Maintenance,13,OnLeave
+1015,Kerry,Mitchell,Pharmacist,Pharmacy,48,Active
+1016,Leon,Phillips,Doctor,Orthopedics,115,Active
+1017,Rochelle,Turner,LabTech,Lab,27,Active
+1018,Jason,Edwards,Security,Emergency,15,Active
+1019,Kimberly,Moore,Nurse,Maternity,30,Terminated
+1020,Trevor,James,Administrator,Administration,40,Active
