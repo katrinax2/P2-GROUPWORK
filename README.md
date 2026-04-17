@@ -6,4 +6,9 @@
 
 ## Python Authors  
 ### Allisha Johnson - 2305609
-### Fiona 
+### Fiona Blidgen - 2307559
+
+### Files 
+#### * EmployeeSystem.c → Main C program 
+#### * employee.csv → Stores employee records (no headers)
+#### * admin.txt → Stores admin login credentials
