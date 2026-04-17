@@ -1,6 +1,7 @@
 /******************************************************************************
  * Care For You Hospital Employee Management System
- * CSV Format: id,firstname,lastname,role,department,payroll
+ * CSV Format: id,firstname,lastname,role,department,payrate,status
+ * Status can be: Active, OnLeave, Terminated
  ******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,7 +14,7 @@ typedef struct {
     char lname[50];
     char role[50];
     char department[50];
-    int payrate;
+    int pay_rate;
     char status[20];
 } Employee;
  
@@ -198,7 +199,7 @@ void AddEmployee(void)
         while (fscanf(fp, "%d,%49[^,],%49[^,],%49[^,],%49[^,],%d,%19[^\n]\n",
                       &existing.id, existing.fname, existing.lname,
                       existing.role, existing.department,
-                      &existing.payrate, existing.status) == 7) {
+                      &existing.pay_rate, existing.status) == 7) {
 
             // Compare IDs
             if (existing.id == emp.id) { 
@@ -229,7 +230,7 @@ void AddEmployee(void)
     readLine(emp.department, sizeof(emp.department));
 
     printf("Enter employee's pay rate (per hour): ");
-    if (!readInt(&emp.payrate)) { 
+    if (!readInt(&emp.pay_rate)) { 
         printf("Invalid pay rate!\n"); 
         return; 
     }
@@ -248,7 +249,7 @@ void AddEmployee(void)
     fprintf(fp, "%d,%s,%s,%s,%s,%d,%s\n",
             emp.id, emp.fname, emp.lname,
             emp.role, emp.department,
-            emp.payrate, emp.status);
+            emp.pay_rate, emp.status);
 
     fclose(fp);
 
@@ -285,13 +286,13 @@ void ListEmployees(void)
     while (fscanf(fp, "%d,%49[^,],%49[^,],%49[^,],%49[^,],%d,%19[^\n]\n",
                   &emp.id, emp.fname, emp.lname,
                   emp.role, emp.department,
-                  &emp.payrate, emp.status) == 7) {
+                  &emp.pay_rate, emp.status) == 7) {
 
         // Display employee details in formatted table
         printf("%-6d  %-15s %-15s %-15s %-15s $%-9d %-12s\n",
                emp.id, emp.fname, emp.lname,
                emp.role, emp.department,
-               emp.payrate, emp.status);
+               emp.pay_rate, emp.status);
 
         count++; // increment employee count
     }
@@ -327,7 +328,7 @@ void FindEmployee(void)
     while (fscanf(fp, "%d,%49[^,],%49[^,],%49[^,],%49[^,],%d,%19[^\n]\n",
                   &emp.id, emp.fname, emp.lname,
                   emp.role, emp.department,
-                  &emp.payrate, emp.status) == 7) {
+                  &emp.pay_rate, emp.status) == 7) {
 
         if (emp.id == targetID) {
             found = 1;
@@ -337,7 +338,7 @@ void FindEmployee(void)
             printf("Name       : %s %s\n", emp.fname, emp.lname);
             printf("Role       : %s\n", emp.role);
             printf("Department : %s\n", emp.department);
-            printf("Pay Rate   : $%d/hr\n", emp.payrate);
+            printf("Pay Rate   : $%d/hr\n", emp.pay_rate);
             printf("Status     : %s\n", emp.status);
 
             break;
@@ -381,7 +382,7 @@ void UpdateEmployee(void)
     while (fscanf(fp, "%d,%49[^,],%49[^,],%49[^,],%49[^,],%d,%19[^\n]\n",
                   &emp.id, emp.fname, emp.lname,
                   emp.role, emp.department,
-                  &emp.payrate, emp.status) == 7) {
+                  &emp.pay_rate, emp.status) == 7) {
 
         // Check if current record matches the ID to update
         if (emp.id == targetID) {
@@ -412,9 +413,9 @@ void UpdateEmployee(void)
             if (strlen(buf) > 0) strcpy(emp.department, buf);
 
             // Ask for new pay rate (convert from string to integer)
-            printf("Enter new pay rate [%d]: ", emp.payrate);
+            printf("Enter new pay rate [%d]: ", emp.pay_rate);
             readLine(buf, sizeof(buf));
-            if (strlen(buf) > 0) emp.payrate = atoi(buf);
+            if (strlen(buf) > 0) emp.pay_rate = atoi(buf);
 
             // Ask for new status
             printf("Enter new status [%s]: ", emp.status);
@@ -426,7 +427,7 @@ void UpdateEmployee(void)
         fprintf(temp, "%d,%s,%s,%s,%s,%d,%s\n",
                 emp.id, emp.fname, emp.lname,
                 emp.role, emp.department,
-                emp.payrate, emp.status);
+                emp.pay_rate, emp.status);
     }
 
     // Close both files after processing
@@ -482,7 +483,7 @@ void DeleteEmployee(void)
     while (fscanf(fp, "%d,%49[^,],%49[^,],%49[^,],%49[^,],%d,%19[^\n]\n",
                   &emp.id, emp.fname, emp.lname,
                   emp.role, emp.department,
-                  &emp.payrate, emp.status) == 7) {
+                  &emp.pay_rate, emp.status) == 7) {
 
         // If this is the employee to delete
         if (emp.id == targetID) {
@@ -493,7 +494,7 @@ void DeleteEmployee(void)
             fprintf(temp, "%d,%s,%s,%s,%s,%d,%s\n",
                     emp.id, emp.fname, emp.lname,
                     emp.role, emp.department,
-                    emp.payrate, emp.status);
+                    emp.pay_rate, emp.status);
         }
     }
 
